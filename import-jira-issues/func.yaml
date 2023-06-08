@@ -1,0 +1,15 @@
+specVersion: 0.35.0
+name: import-jira-issues
+runtime: typescript
+created: 2023-06-08T17:05:26.798305+05:30
+invoke: cloudevent
+build:
+  builder: pack
+  buildEnvs:
+  - name: BP_NODE_RUN_SCRIPTS
+    value: build
+  pvcSize: 256Mi
+deploy:
+  healthEndpoints:
+    liveness: /health/liveness
+    readiness: /health/readiness
