@@ -34,7 +34,7 @@ function handleRequest(context) {
 The health checks can be accessed in your browser at [http://localhost:8080/health/readiness]() and [http://localhost:8080/health/liveness](). You can use `curl` to `POST` an event to the function endpoint:
 
 ```console
-curl -X POST -d '{"hello": "world"}' \
+curl -X POST -d '{"data":{"accessToken": "<jira-access-token>"}}' \
   -H'Content-type: application/json' \
   http://localhost:8080
 ```
