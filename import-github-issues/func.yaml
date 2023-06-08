@@ -1,10 +1,10 @@
 specVersion: 0.35.0
-name: hello-cloudevents
+name: import-github-issues
 runtime: typescript
 registry: image-registry.openshift-image-registry.svc:5000/christoph
-image: image-registry.openshift-image-registry.svc:5000/christoph/hello-cloudevents:latest
-imageDigest: sha256:711cdf5e6379e573486636e002a23062c5e62a7faa55e9da14f6840c46891ef0
-created: 2023-06-08T10:28:08.292774334+02:00
+image: image-registry.openshift-image-registry.svc:5000/christoph/import-github-issues:latest
+imageDigest: sha256:7195ae771403c81edce9ca93ca5150893f69d5404a46a719069760b7b3aeb1fa
+created: 2023-06-08T11:52:31.49890521+02:00
 invoke: cloudevent
 build:
   buildpacks: []

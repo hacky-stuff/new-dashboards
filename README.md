@@ -44,6 +44,15 @@ Some links:
 * https://github.com/knative/func/blob/main/docs/function-templates/typescript.md
 * https://docs.openshift.com/serverless/1.29/functions/serverless-developing-typescript-functions.html
 
+Issues with `func create` TypeScript template:
+
+* Doesn't work with node 14? Switched to node 18
+* TypeScript compiler issues. Updated typescript and @types/node:
+```
+npm add -D typescript@latest
+npm add -D @types/node
+```
+
 ## Persist data
 
 TODO
@@ -55,3 +64,5 @@ TODO
 ## Backstage plugin
 
 TODO
+
+

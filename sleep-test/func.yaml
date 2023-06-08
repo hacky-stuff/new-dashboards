@@ -1,10 +1,10 @@
 specVersion: 0.35.0
-name: hello-cloudevents
+name: sleep-test
 runtime: typescript
 registry: image-registry.openshift-image-registry.svc:5000/christoph
-image: image-registry.openshift-image-registry.svc:5000/christoph/hello-cloudevents:latest
-imageDigest: sha256:711cdf5e6379e573486636e002a23062c5e62a7faa55e9da14f6840c46891ef0
-created: 2023-06-08T10:28:08.292774334+02:00
+image: image-registry.openshift-image-registry.svc:5000/christoph/sleep-test:latest
+imageDigest: sha256:d3d95f2ca6ec01ed94d4330a259ae5aa4cbf9f3c10bed8187070b5b9fa98815d
+created: 2023-06-08T11:30:57.35281303+02:00
 invoke: cloudevent
 build:
   buildpacks: []
