@@ -54,6 +54,10 @@ metadata:
   annotations:
     backstage.io/source-location: url:https://github.com/openshift/console/tree/master/frontend/packages/console-app
     github.com/project-slug: openshift/console
+    jira/project-key: OCPBUGS
+    jira/component: Management console # optional, you might skip value to fetch data for all components
+    #jira/label: <example-label> # optional, you might skip value to fetch data for all labels
+    #jira/token-type: Bearer # optional, used for Activity stream feed. If you are using Basic auth you can skip this.
 spec:
   type: plugin
   lifecycle: production
@@ -68,6 +72,10 @@ metadata:
   annotations:
     backstage.io/source-location: url:https://github.com/openshift/console/tree/master/frontend/packages/dev-console
     github.com/project-slug: openshift/console
+    jira/project-key: ODC
+    #jira/component: <example-component> # optional, you might skip value to fetch data for all components
+    #jira/label: <example-label> # optional, you might skip value to fetch data for all labels
+    #jira/token-type: Bearer # optional, used for Activity stream feed. If you are using Basic auth you can skip this.
 spec:
   type: plugin
   lifecycle: production
