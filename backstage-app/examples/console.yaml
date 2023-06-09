@@ -1,0 +1,117 @@
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: console-team
+spec:
+  type: team
+  children: []
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: console-admin-team
+spec:
+  type: team
+  children: []
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: odc-team
+spec:
+  type: team
+  children: []
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-system
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: console
+  description: OpenShift Cluster Console UI
+  annotations:
+    backstage.io/source-location: url:https://github.com/openshift/console
+    github.com/project-slug: openshift/console
+  tags:
+    - typescript
+  links:
+    - url: https://docs.openshift.com/container-platform/latest/web_console/web-console-overview.html
+      title: OpenShift Documentation
+      icon: docs
+      type: docs
+spec:
+  lifecycle: production
+  owner: console-team
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: admin-perspective
+  annotations:
+    backstage.io/source-location: url:https://github.com/openshift/console/tree/master/frontend/packages/console-app
+    github.com/project-slug: openshift/console
+spec:
+  type: plugin
+  lifecycle: production
+  owner: console-admin-team
+  system: console
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dev-perspective
+  annotations:
+    backstage.io/source-location: url:https://github.com/openshift/console/tree/master/frontend/packages/dev-console
+    github.com/project-slug: openshift/console
+spec:
+  type: plugin
+  lifecycle: production
+  owner: odc-team
+  system: console
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: helm-plugin
+  annotations:
+    backstage.io/source-location: url:https://github.com/openshift/console/tree/master/frontend/packages/helm-plugin
+    github.com/project-slug: openshift/console
+spec:
+  type: plugin
+  lifecycle: production
+  owner: odc-team
+  system: console
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pipelines-plugin
+  annotations:
+    backstage.io/source-location: url:https://github.com/openshift/console/tree/master/frontend/packages/pipelines-plugin
+    github.com/project-slug: openshift/console
+spec:
+  type: plugin
+  lifecycle: production
+  owner: odc-team
+  system: console
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-component
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: knative-plugin
+  annotations:
+    backstage.io/source-location: url:https://github.com/openshift/console/tree/master/frontend/packages/knative-plugin
+    github.com/project-slug: openshift/console
+spec:
+  type: plugin
+  lifecycle: production
+  owner: odc-team
+  system: console
