@@ -53,6 +53,16 @@ import {
 } from '@backstage/catalog-model';
 
 import {
+  GithubIssuesCard,
+  GithubIssuesPage,
+} from '@backstage/plugin-github-issues';
+
+import {
+  EntityTeamPullRequestsCard,
+  EntityTeamPullRequestsContent,
+} from '@backstage/plugin-github-pull-requests-board';
+
+import {
   EntityJiraOverviewCard,
   isJiraAvailable,
 } from '@roadiehq/backstage-plugin-jira';
@@ -141,6 +151,9 @@ const overviewContent = (
         </Grid>
       </EntitySwitch.Case>
     </EntitySwitch>
+    <Grid item xs={12}>
+      <GithubIssuesCard />
+    </Grid>
     <EntitySwitch>
       <EntitySwitch.Case if={isGithubInsightsAvailable}>
         <Grid item md={6}>
@@ -230,6 +243,10 @@ const defaultEntityPage = (
   <EntityLayout>
     <EntityLayout.Route path="/" title="Overview">
       {overviewContent}
+    </EntityLayout.Route>
+
+    <EntityLayout.Route path="github-issues" title="GitHub Issues">
+      <GithubIssuesPage />
     </EntityLayout.Route>
 
     <EntityLayout.Route
@@ -328,7 +345,13 @@ const groupPage = (
         <Grid item xs={12}>
           <EntityMembersListCard />
         </Grid>
+        <Grid item xs={12}>
+          <EntityTeamPullRequestsCard />
+        </Grid>
       </Grid>
+    </EntityLayout.Route>
+    <EntityLayout.Route path="/pull-requests" title="Pull Requests">
+      <EntityTeamPullRequestsContent />
     </EntityLayout.Route>
   </EntityLayout>
 );
