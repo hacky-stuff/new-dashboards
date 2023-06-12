@@ -3,24 +3,17 @@ name: import-github-issues
 runtime: typescript
 registry: image-registry.openshift-image-registry.svc:5000/christoph
 image: image-registry.openshift-image-registry.svc:5000/christoph/import-github-issues:latest
-imageDigest: sha256:7195ae771403c81edce9ca93ca5150893f69d5404a46a719069760b7b3aeb1fa
+imageDigest: sha256:0926c95418b60ef2855fd6fdfbfb788ed2d2ceb0a028d89b4b471a3cfe2b52bb
 created: 2023-06-08T11:52:31.49890521+02:00
 invoke: cloudevent
 build:
-  buildpacks: []
   builder: pack
   buildEnvs:
   - name: BP_NODE_RUN_SCRIPTS
     value: build
-run:
-  volumes: []
-  envs: []
+  pvcSize: 256Mi
 deploy:
   namespace: christoph
-  remote: false
-  annotations: {}
-  options: {}
-  labels: []
   healthEndpoints:
     liveness: /health/liveness
     readiness: /health/readiness

@@ -3,7 +3,7 @@ name: log-sink
 runtime: typescript
 registry: image-registry.openshift-image-registry.svc:5000/christoph
 image: image-registry.openshift-image-registry.svc:5000/christoph/log-sink:latest
-imageDigest: sha256:1a00bda89808d5b2c82dcec5bfb05af66339be50e8fcc787aa710507e07f764d
+imageDigest: sha256:f3a5b3c15a387119e41dc701c68145bf5396f485d27c8842e5990e1080cc5c16
 created: 2023-06-08T16:40:37.85960965+02:00
 invoke: cloudevent
 build:
