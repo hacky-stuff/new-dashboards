@@ -1,0 +1,9 @@
+apiVersion: eventing.knative.dev/v1beta1
+kind: EventType
+metadata:
+  name: import-github-issues
+spec:
+  type: import-github-issues
+  source: user
+  schema:
+  description:
