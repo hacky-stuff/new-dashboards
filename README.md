@@ -2,11 +2,11 @@
 
 This repository contains the result of our hack week to import and visualize Jira and GitHub issues in a dashboard; and maybe in backstage.
 
-## Cloud Events (Event Types)
+## Event Types (Cloud Events)
 
 To trigger an import, and to react and analyze (enhance) the Jira and GitHub data.
 
-## Functions
+## (Knative) Functions
 
 To import existing Jira and GitHub issues and to get updates via webhooks.
 
