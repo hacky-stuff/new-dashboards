@@ -1,0 +1,8 @@
+apiVersion: messaging.knative.dev/v1
+kind: Channel
+metadata:
+  name: github-issues
+spec:
+  channelTemplate:
+    apiVersion: messaging.knative.dev/v1
+    kind: InMemoryChannel
