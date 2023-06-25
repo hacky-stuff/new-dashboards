@@ -1,6 +1,8 @@
 package main
 
 import (
+	"github.com/hacky-stuff/new-dashboards/clis/git-import/pkg/cmd/commit"
+	"github.com/hacky-stuff/new-dashboards/clis/git-import/pkg/cmd/repo"
 	"github.com/spf13/cobra"
 )
 
@@ -10,9 +12,8 @@ var rootCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(addCmd)
-	rootCmd.AddCommand(listCmd)
+	rootCmd.AddCommand(repo.RepoCmd)
+	rootCmd.AddCommand(commit.CommitCmd)
 	rootCmd.AddCommand(syncCmd)
-	rootCmd.AddCommand(deleteCmd)
 	rootCmd.AddCommand(versionCmd)
 }

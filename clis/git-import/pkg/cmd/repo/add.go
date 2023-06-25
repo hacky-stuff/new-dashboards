@@ -1,7 +1,6 @@
-package main
+package repo
 
 import (
-	"context"
 	"log"
 
 	"github.com/hacky-stuff/new-dashboards/clis/git-import/pkg/backend/es"
@@ -19,19 +18,10 @@ var addCmd = &cobra.Command{
 			URL:  args[1],
 		}
 
-		es, err := es.GetTypedClient()
-		if err != nil {
-			log.Fatalf("Error creating the client: %s", err)
-		}
-
-		res, err := es.Core.Index("git-repository").
-			Id(args[0]).
-			Request(repo).
-			Do(context.Background())
+		res, err := es.Add("git-repository", args[0], repo)
 		if err != nil {
 			log.Fatalf("Error getting response: %v", err)
 		}
-
 		log.Printf("Response: %v\n", res)
 	},
 }
