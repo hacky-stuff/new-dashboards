@@ -6,9 +6,10 @@ import (
 
 var CommitCmd = &cobra.Command{
 	Use:   "commit",
-	Short: "List git commits.",
+	Short: "Git commits.",
 }
 
 func init() {
 	CommitCmd.AddCommand(listCmd)
+	CommitCmd.AddCommand(statsCmd)
 }
