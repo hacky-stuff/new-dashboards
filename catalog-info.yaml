@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: new-dashboards
+  annotations:
+    github.com/project-slug: hacky-stuff/new-dashboards
+spec:
+  type: other
+  owner: hacky-stuff
+  lifecycle: unknown
